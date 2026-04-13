@@ -6,7 +6,9 @@ Logiikka löytyy tiedostosta sudoku_tarkistin.py.
 '''
 
 from sudoku_tarkistin import sudoku_oikein, sudoku_valmis
+from sudoku_io import lue_sudoku, tallenna_sudoku
 
+PELITILANNE_JSON = "pelitilanne.json"
 
 # Sudoku-logo on luotu https://patorjk.com/software/taag/ -palvelussa.
 logo = r'''
@@ -69,6 +71,8 @@ def pelaa_siirto(ruudukko: list) -> None:
 
         if sudoku_oikein(ruudukko):
             print('OK!')
+            tallenna_sudoku(ruudukko, PELITILANNE_JSON)
+
         else:
             # Perutaan siirto
             print('Ei sallittu numero!')
@@ -140,17 +144,7 @@ def tulosta_ruudukko(ruudukko: list):
 
 def main():
     # Pelin alkutila on lainattu mooc.fi:n esimerkistä
-    ruudukko = [
-        [2, 6, 7, 8, 3, 9, 5, 0, 4],
-        [9, 0, 3, 5, 1, 0, 6, 0, 0],
-        [0, 5, 1, 6, 0, 0, 8, 3, 9],
-        [5, 1, 9, 0, 4, 6, 3, 2, 8],
-        [8, 0, 2, 1, 0, 5, 7, 0, 6],
-        [6, 7, 4, 3, 2, 0, 0, 0, 5],
-        [0, 0, 0, 4, 5, 7, 2, 6, 3],
-        [3, 2, 0, 0, 8, 0, 0, 5, 7],
-        [7, 4, 5, 0, 0, 3, 9, 0, 1]
-    ]
+    ruudukko = lue_sudoku(PELITILANNE_JSON)
 
     pelaa(ruudukko)
 
