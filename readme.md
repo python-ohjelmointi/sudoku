@@ -1,7 +1,9 @@
-# Python-ohjelmointi -kurssin esimerkit
+# Tekstikäyttöliittymä sudoku-peliin
 
-Saat tutkia ja muokata kurssin esimerkkikoodeja eri tehtävien ja aiheiden ymmärtämiseksi, mutta koodin suora kopiointi osaksi omaa ratkaisua on kielletty.
+Kurssin sudoku-tehtävien myötä saatte itsellenne toimivan sudoku-tarkastuslogiikan, mutta varsinaisen pelattavan pelin kehittäminen ei ole osana harjoitustehtäväpakettia.
 
-Kurssin kotisivu: https://python-ohjelmointi.github.io
+Jos haluat, voit hyödyntää oman koodisi kokeilemisessa oheista sudoku-tekstikäyttöliittymää. Kopioi itsellesi [sudoku_peli.py](sudoku_peli.py) sekä [sudoku_tarkistin.py](sudoku_tarkistin.py). Lisää sudoku_tarkistin.py-tiedostoosi oma toteutuksesi `sudoku_oikein`-funktiosta ja sen mahdollisesti tarvitsemista apufunktioista, kuten `rivi_oikein`, `sarake_oikein` ja `nelio_oikein`.
 
-Opintojaksokuvaus: https://opinto-opas.haaga-helia.fi/course/SOF004AS2A
+Mukavia pelihetkiä 😄
+
+![Tekstikäyttöliittymä sudoku-peliin](./sudoku.png)
